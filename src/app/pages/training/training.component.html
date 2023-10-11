@@ -1,8 +1,49 @@
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
     <div class="h-32 rounded-lg bg-gray-200"></div>
     <div class="h-32 rounded-lg bg-gray-200"></div>
-    <div class="h-32 rounded-lg bg-gray-200"></div>
     <div class="h-32 rounded-lg bg-gray-200">
-        <app-card></app-card>
+        <!-- MOVE to own component -->
+    <div class="space-y-5 rounded-2xl bg-white/5 p-4">
+        <div class="h-24 rounded-lg bg-rose-100/10"></div>
+        <div class="space-y-3">
+          <div class="h-3 w-3/5 rounded-lg bg-grey-100/10"></div>
+          <div class="h-3 w-4/5 rounded-lg bg-grey-100/20"></div>
+          <div class="h-3 w-2/5 rounded-lg bg-grey-100/20"></div>
+        </div>
+      </div>
     </div>
+    <div class="h-32 rounded-lg bg-gray-200" *ngFor="let training of completedTraining">
+        <app-card
+        [imageUrl]="training.imgUrl"
+        >
+        <div>
+            <h3
+              class="text-gray-900 group-hover:underline group-hover:underline-offset-4"
+            >
+              {{ training.title }}
+            </h3>
+            <p >
+                <ng-container *ngIf="training.trainingType === TrainingType.VIDEO; else showBook">
+                    <span class="text-gray-900">Duration: </span> <span class="mt-1.5 max-w-[45ch] text-md text-gray-500">{{ training.duration }} {{ training.duration > 1 ? "hours": "hour"}}</span>
+                </ng-container>
+                <ng-template #showBook>
+                    <span class="text-gray-900">Duration: </span> <span class="mt-1.5 max-w-[45ch] text-md text-gray-500">{{ training.duration }} Pages</span>
+                </ng-template>
+            </p>
+            <p>
+                <span class="text-gray-900">Training Institution: </span> <span class="mt-1.5 max-w-[45ch] text-md text-gray-500">{{ training.institution }}</span>
+            </p>
+            <p>
+                <span class="text-gray-900">Author: </span> <span class="mt-1.5 max-w-[45ch] text-md text-gray-500">{{ training.author }}</span>
+            </p>
+           
+            <p class="mt-1.5 max-w-[45ch] text-xs text-gray-500">
+              I completed the course in {{ training.dateCompleted }}. Visit {{ training.trainingUrl}} for more information about the course. Visit {{ training.authorURL}} to learn more about the Author
+            </p>
+          </div>
+      
+          </app-card>
+    </div>
+
+    
   </div>

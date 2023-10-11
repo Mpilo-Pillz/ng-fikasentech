@@ -1,13 +1,15 @@
 <a href="#" class="block group">
     <img
-      src="https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      [src]="imageUrl"
       alt=""
-      class="h-[350px] w-full object-cover sm:h-[450px]"
+      class="h-[250px] w-full object-cover sm:h-[350px]"
     />
   
     <div class="mt-1.5">
+        <ng-content></ng-content>
       <p class="text-xs text-gray-500">Space Grey</p>
   
+      <!-- To use for skills -->
       <div class="mt-1.5 flex gap-1">
         <form>
           <fieldset>
