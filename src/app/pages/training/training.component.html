@@ -13,11 +13,11 @@
     </div>
   </div>
   <div
-    class="h-32 rounded-lg bg-gray-200"
+    class="h-auto m-3 rounded-lg bg-gray-200"
     *ngFor="let training of completedTraining"
   >
     <app-card [imageUrl]="training.imgUrl">
-      <div>
+      <div class="p-3">
         <h3
           class="text-gray-900 group-hover:underline group-hover:underline-offset-4"
         >
