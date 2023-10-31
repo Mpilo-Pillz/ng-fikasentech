@@ -8,15 +8,19 @@ import { Training, TrainingType } from './training.model';
   templateUrl: './training.component.html'
 })
 export class TrainingComponent implements OnInit {
+
   completedTraining: Training[]
-  TrainingType = TrainingType
+  TrainingType = TrainingType;
+  isLoading: boolean = true;
+  numberOfSkeletonCards = new Array(25);
+
   constructor(private trainingService: TrainingService) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.trainingService.fetchTraining().subscribe((data) => {
       this.completedTraining = data
-      console.log("data-->", data);
-      
+      this.isLoading = false 
     })
   }
 }

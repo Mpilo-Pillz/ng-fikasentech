@@ -1,19 +1,19 @@
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-  <div class="h-32 rounded-lg bg-gray-200"></div>
-  <div class="h-32 rounded-lg bg-gray-200"></div>
-  <div class="h-32 rounded-lg bg-gray-200">
-    <!-- MOVE to own component -->
-    <div class="space-y-5 rounded-2xl bg-white/5 p-4">
-      <div class="h-24 rounded-lg bg-rose-100/10"></div>
-      <div class="space-y-3">
-        <div class="h-3 w-3/5 rounded-lg bg-grey-100/10"></div>
-        <div class="h-3 w-4/5 rounded-lg bg-grey-100/20"></div>
-        <div class="h-3 w-2/5 rounded-lg bg-grey-100/20"></div>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8" *ngIf="isLoading">
+  <ng-container *ngFor="let card of numberOfSkeletonCards">
+      <app-card >
+      <div class="bg-gray-200 rounded-lg p-4 animate-pulse">
+        <div class="h-32 bg-gray-300 rounded mb-2"></div>
+        <div class="h-4 bg-gray-300 rounded w-2/3 mb-2"></div>
+        <div class="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
+        <div class="h-4 bg-gray-300 rounded w-1/4 mb-2"></div>
       </div>
-    </div>
+    </app-card>
+    </ng-container>
   </div>
+
+<div *ngIf="!isLoading" class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
   <div
-    class="h-auto m-3 rounded-lg bg-gray-200"
+    class="h-auto m-3 bg-gray-200"
     *ngFor="let training of completedTraining"
   >
     <app-card [imageUrl]="training.imgUrl">
