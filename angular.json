@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-fikasentech:build:production"
+              "buildTarget": "ng-fikasentech:build:production"
             },
             "development": {
-              "browserTarget": "ng-fikasentech:build:development"
+              "buildTarget": "ng-fikasentech:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-fikasentech:build"
+            "buildTarget": "ng-fikasentech:build"
           }
         },
         "test": {
