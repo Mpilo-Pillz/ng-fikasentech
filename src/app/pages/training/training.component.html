@@ -1,4 +1,7 @@
-<app-page-header-card></app-page-header-card>
+<div class="w-1/2 sm:w-full md:w-full lg:w-1/2 mx-auto">
+  <app-page-header-card></app-page-header-card>
+</div>
+
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8" *ngIf="isLoading">
   <ng-container *ngFor="let card of numberOfSkeletonCards">
       <app-card >
