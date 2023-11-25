@@ -1,6 +1,70 @@
 <app-jumbotron
-[jumbotronTitle]="jumbotronTitle"
-[jumbotronContent]="jumbotronContent"
-[imageUrl]="imageUrl"
-[actionText]="actionText"
+  [jumbotronTitle]="jumbotronTitle"
+  [jumbotronContent]="jumbotronContent"
+  [imageUrl]="imageUrl"
+  [actionText]="actionText"
 ></app-jumbotron>
+
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">
+    Services Offered
+  </h1>
+  <div class="flex flex-wrap -mx-4 justify-center">
+    <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+      <app-square-card
+        serviceOffered="Web Development Services"
+        serviceDescription="We craft digital experiences with precision and creativity. We understand the web is your global stage, and we're here to ensure your business performs spectacularly. Our expertise turns websites into valuable assets, driving growth and innovation."
+      >
+        <!-- <div
+          card-icon
+          class="bg-blue-500 w-10 h-10 flex items-center justify-center rounded-full"
+        >
+          <span class="text-white text-xl font-bold">W</span>
+        </div> -->
+        <img
+          card-icon
+          src="https://res.cloudinary.com/mpilopillz/image/upload/v1627816391/website_ruqbab.png"
+          class="w-10 h-10"
+          alt="Service Image"
+        />
+      </app-square-card>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+      <app-square-card
+        serviceOffered="Native Mobile App Development"
+        serviceDescription="We sculpt state-of-the-art native mobile apps that deliver seamless performance and intuitive user experiences. We empower your business to harness the power of mobile technology, connecting you with users on the most personal platforms they own."
+      >
+        <!-- <div
+          card-icon
+          class="bg-blue-500 w-10 h-10 flex items-center justify-center rounded-full"
+        >
+          <span class="text-white text-xl font-bold">M</span>
+        </div> -->
+        <img
+          card-icon
+          src="https://res.cloudinary.com/mpilopillz/image/upload/v1627816391/cross-platform_zzd78t.png"
+          class="w-10 h-10"
+          alt="Service Image"
+        />
+      </app-square-card>
+    </div>
+    <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+      <app-square-card
+        serviceOffered="Comprehensive Testing Services"
+        serviceDescription="We offer meticulous Software Quality Assurance (Performance & Test Automation) for web and mobile apps. We ensure that your digital solutions are robust, reliable, and ready for launch. We safeguard your platforms, allowing you to deliver excellence confidently."
+      >
+        <!-- <div
+          card-icon
+          class="bg-blue-500 w-10 h-10 flex items-center justify-center rounded-full"
+        >
+          <span class="text-white text-xl font-bold">QA</span>
+        </div> -->
+        <img
+          card-icon
+          src="https://res.cloudinary.com/mpilopillz/image/upload/v1627816391/bug_ntlnev.png"
+          class="w-10 h-10"
+          alt="Service Image"
+      /></app-square-card>
+    </div>
+  </div>
+</div>
