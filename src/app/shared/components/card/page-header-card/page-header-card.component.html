@@ -3,36 +3,41 @@
       <div>
         <h3 class="font-medium sm:text-lg">
           <a href="#" class="hover:underline">
-            Learning How to Learn
+            {{cardHeading}}
+            
           </a>
         </h3>
   
         <p class="line-clamp-2 text-sm text-gray-700">
-            My desire is to be a world class Software Engineer, as such I am constantly practicing to sharpen my craft. Outside of working hours I have collaborated with other senior developers to turn ideas into software helping me improve as a developer whiles exposing me to a variety of Tools and Frameworks. I have worked on the projects below. 
+          {{cardContent}}
+            
         </p>
       </div>
     </div>
   
-    <div class="flex justify-end">
-      <strong
-        class="-mb-[2px] -me-[2px] inline-flex items-center gap-1 rounded-ee-xl rounded-ss-xl bg-green-600 px-3 py-1.5 text-white"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          />
-        </svg>
-  
-        <span class="text-[10px] font-medium sm:text-xs">Solved!</span>
-      </strong>
-    </div>
+    <ng-container *ng-if="hasBadge">
+        <div class="flex justify-end">
+            <strong
+              class="-mb-[2px] -me-[2px] inline-flex items-center gap-1 rounded-ee-xl rounded-ss-xl bg-green-600 px-3 py-1.5 text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                />
+              </svg>
+        
+              <span class="text-[10px] font-medium sm:text-xs">Solved!</span>
+            </strong>
+          </div>
+    </ng-container>
+    
   </article>
