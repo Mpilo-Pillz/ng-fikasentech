@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page-header-card',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-header-card.component.scss']
 })
 export class PageHeaderCardComponent {
+  hasBadge = false
 
+  @Input() cardHeading: string;
+  @Input() cardContent: string
+  
 }
