@@ -6,10 +6,24 @@ import { CardComponent } from './components/card/card.component';
 import { PageRoutingModule } from '../pages/page-routing.module';
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 import { PageHeaderCardComponent } from './components/card/page-header-card/page-header-card.component';
+import { SquareCardComponent } from './components/card/square-card/square-card.component';
 
 @NgModule({
-  declarations: [HeaderComponent, JumbotronComponent, CardComponent, SkeletonLoaderComponent, PageHeaderCardComponent],
+  declarations: [
+    HeaderComponent,
+    JumbotronComponent,
+    CardComponent,
+    SkeletonLoaderComponent,
+    PageHeaderCardComponent,
+    SquareCardComponent,
+  ],
   imports: [CommonModule, PageRoutingModule],
-  exports: [HeaderComponent, JumbotronComponent, CardComponent, PageHeaderCardComponent],
+  exports: [
+    HeaderComponent,
+    JumbotronComponent,
+    CardComponent,
+    PageHeaderCardComponent,
+    SquareCardComponent,
+  ],
 })
 export class SharedModule {}
