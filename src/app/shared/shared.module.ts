@@ -7,6 +7,7 @@ import { PageRoutingModule } from '../pages/page-routing.module';
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 import { PageHeaderCardComponent } from './components/card/page-header-card/page-header-card.component';
 import { SquareCardComponent } from './components/card/square-card/square-card.component';
+import { StatsCardComponent } from './components/card/stats-card/stats-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SquareCardComponent } from './components/card/square-card/square-card.c
     SkeletonLoaderComponent,
     PageHeaderCardComponent,
     SquareCardComponent,
+    StatsCardComponent,
   ],
   imports: [CommonModule, PageRoutingModule],
   exports: [
@@ -24,6 +26,7 @@ import { SquareCardComponent } from './components/card/square-card/square-card.c
     CardComponent,
     PageHeaderCardComponent,
     SquareCardComponent,
+    StatsCardComponent,
   ],
 })
 export class SharedModule {}

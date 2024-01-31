@@ -1,0 +1,52 @@
+<section class="bg-white">
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        Passion Meets Expertise Meets Innovation: A Self-Taught Software
+        Engineering Leader
+      </h2>
+
+      <p class="mt-4 text-gray-500 sm:text-xl">
+        Welcome to the story of a self-taught software engineer whose passion
+        for technology transcends the conventional path. My journey began with a
+        curious mind and a relentless drive to understand the gears of software
+        development. Over {{ yearsOfExperience }} enriching years, I have not
+        only mastered the craft but have also helped shape the minds of 5
+        aspiring professionals who are now making their own mark in the
+        industry. As a lifelong learner, I immerse myself in the latest
+        technological trends, ensuring that my skills are not just current, but
+        also future-ready. This quest for knowledge has led me to participate in
+        2 hackathons, pushing the boundaries of innovation and creativity. My
+        corporate experience is a tapestry of achievements, with a track record
+        of delivering complex projects that drive growth and efficiency for
+        eCommerce and Corporate giants. I believe in leading by example, and as
+        a mentor, I am committed to training and inspiring the next generation
+        of software engineers. Join me in a partnership where experience,
+        continuous learning, and a passion for mentoring come together to create
+        technology solutions that power progress.
+      </p>
+    </div>
+
+    <div class="mt-8 sm:mt-12">
+      <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <app-stats-card
+          [statsDescription]="'Mentees Trained and turned professional'"
+          [statsValue]="5"
+        >
+        </app-stats-card>
+
+        <app-stats-card
+          [statsDescription]="'Total Years Of Professional Experience'"
+          [statsValue]="yearsOfExperience"
+        >
+        </app-stats-card>
+
+        <app-stats-card
+          [statsDescription]="'Hackerthon Participations'"
+          [statsValue]="2"
+        >
+        </app-stats-card>
+      </dl>
+    </div>
+  </div>
+</section>
