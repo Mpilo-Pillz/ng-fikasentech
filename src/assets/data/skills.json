@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "proficiency": "5",
+    "category": "Language"
+  },
+  {
+    "id": 2,
+    "name": "TypeScript",
+    "proficiency": "5",
+    "category": "Language"
+  },
+  {
+    "id": 3,
+    "name": "React",
+    "proficiency": "5",
+    "category": "Framework"
+  },
+  {
+    "id": 4,
+    "name": "Angular",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 5,
+    "name": "Vue",
+    "proficiency": "3",
+    "category": "Framework"
+  },
+  {
+    "id": 6,
+    "name": "Node",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 7,
+    "name": "Express",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 8,
+    "name": "MongoDB",
+    "proficiency": "4",
+    "category": "Database"
+  },
+  {
+    "id": 9,
+    "name": "PostgreSQL",
+    "proficiency": "3",
+    "category": "Database"
+  },
+  {
+    "id": 10,
+    "name": "MySQL",
+    "proficiency": "3",
+    "category": "Database"
+  },
+  {
+    "id": 11,
+    "name": "HTML",
+    "proficiency": "5",
+    "category": "Language"
+  },
+  {
+    "id": 12,
+    "name": "CSS",
+    "proficiency": "5",
+    "category": "Language"
+  },
+  {
+    "id": 13,
+    "name": "SASS",
+    "proficiency": "5",
+    "category": "Language"
+  },
+  {
+    "id": 14,
+    "name": "Mongoose",
+    "proficiency": "3",
+    "category": "Framework"
+  },
+  {
+    "id": 15,
+    "name": "Bootstrap",
+    "proficiency": "5",
+    "category": "Framework"
+  },
+  {
+    "id": 16,
+    "name": "TailwindCSS",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 17,
+    "name": "Material-UI",
+    "proficiency": "5",
+    "category": "Framework"
+  },
+  {
+    "id": 18,
+    "name": "Java",
+    "proficiency": "3",
+    "category": "Language"
+  },
+  {
+    "id": 19,
+    "name": "Jest",
+    "proficiency": "4",
+    "category": "Testing"
+  },
+  {
+    "id": 20,
+    "name": "Swift",
+    "proficiency": "3",
+    "category": "Language"
+  },
+  {
+    "id": 21,
+    "name": "UIKit",
+    "proficiency": "3",
+    "category": "Framework"
+  },
+  {
+    "id": 22,
+    "name": "Cypress",
+    "proficiency": "5",
+    "category": "Testing"
+  },
+  {
+    "id": 23,
+    "name": "Jasmine",
+    "proficiency": "3",
+    "category": "Testing"
+  },
+  {
+    "id": 24,
+    "name": "SwiftUI",
+    "proficiency": "2",
+    "category": "Framework"
+  },
+  {
+    "id": 25,
+    "name": "Flutter",
+    "proficiency": "1",
+    "category": "Framework"
+  },
+  {
+    "id": 26,
+    "name": "Mongoose",
+    "proficiency": "5",
+    "category": "Database"
+  },
+  {
+    "id": 27,
+    "name": "Sequelize",
+    "proficiency": "2",
+    "category": "Database"
+  },
+  {
+    "id": 28,
+    "name": "Prisma",
+    "proficiency": "2",
+    "category": "Database"
+  },
+  {
+    "id": 29,
+    "name": "Selenium",
+    "proficiency": "5",
+    "category": "Testing"
+  },
+  {
+    "id": 30,
+    "name": "Apollo",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 31,
+    "name": "Redux / Redux Toolkit",
+    "proficiency": "4",
+    "category": "Framework"
+  },
+  {
+    "id": 32,
+    "name": "Zustand",
+    "proficiency": "3",
+    "category": "Framework"
+  },
+  {
+    "id": 33,
+    "name": "Dart",
+    "proficiency": "1",
+    "category": "Language"
+  },
+  {
+    "id": 7,
+    "name": "NestJS",
+    "proficiency": "3",
+    "category": "Framework"
+  },
+  {
+    "id": 34,
+    "name": "Appium",
+    "proficiency": "4",
+    "category": "Testing"
+  }
+]
