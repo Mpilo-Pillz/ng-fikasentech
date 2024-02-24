@@ -1,1 +1,36 @@
-skills works
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2"
+>
+  <ng-container
+    *ngFor="let skill of skills | filter : 'category' : 'Framework'"
+  >
+    <div
+      class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
+    >
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+        {{ skill.name }}
+      </h5>
+      <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
+      <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+        <div
+          class="bg-blue-600 h-2.5 rounded-full"
+          [style.width.%]="skill.proficiency * 20"
+        ></div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<!-- <div class="bg-white rounded-lg border border-gray-200 shadow-md max-w-xl">
+  <div class="space-y-2" *ngFor="let skill of skills">
+    <div class="flex justify-between">
+      <span>{{ skill.name }}</span>
+      <span>{{ skill.proficiency }}/5</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div
+        class="bg-blue-600 h-2.5 rounded-full"
+        [style.width.%]="skill.proficiency * 20"
+      ></div>
+    </div>
+  </div>
+</div> -->
