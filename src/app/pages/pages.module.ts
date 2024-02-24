@@ -5,6 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 import { TrainingComponent } from './training/training.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FilterPipe } from '../pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { AboutComponent } from './about/about.component';
     TrainingComponent,
     ProjectsComponent,
     AboutComponent,
+    SkillsComponent,
+    FilterPipe,
   ],
   imports: [CommonModule, SharedModule],
   exports: [HomeComponent],
