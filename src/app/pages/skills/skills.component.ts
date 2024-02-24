@@ -7,11 +7,11 @@ import { Skill } from './skills.model';
   templateUrl: 'skills.component.html',
 })
 export class SkillsComponent implements OnInit {
-  skill: Skill[] = [];
+  skills: Skill[] = [];
 
   constructor(private skillService: SkillsService) {}
 
   ngOnInit(): void {
-    this.skillService.getSkills().subscribe((skill) => (this.skill = skill));
+    this.skillService.getSkills().subscribe((skill) => (this.skills = skill));
   }
 }

@@ -4,6 +4,7 @@ type Indexable<T> = T & { [key: string]: any };
 
 @Pipe({
   name: 'filter',
+  standalone: false,
 })
 export class FilterPipe implements PipeTransform {
   transform<T>(
