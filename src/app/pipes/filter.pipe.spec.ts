@@ -11,6 +11,37 @@ describe('FilterPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
+  it('should filter arrays by skill category', () => {
+    const items = [
+      { id: 1, name: 'Angular', category: 'Framework' },
+      { id: 2, name: 'JavaScript', category: 'Language' },
+      { id: 3, name: 'Vue', category: 'Framework' },
+    ];
+
+    const result = pipe.transform(items, 'category', 'Framework');
+    expect(result.length).toBe(2);
+    expect(result).toEqual([
+      { id: 1, name: 'Angular', category: 'Framework' },
+      { id: 3, name: 'Vue', category: 'Framework' },
+    ]);
+  });
+
+  it('returns the original array if no filter key or value is provided', () => {
+    const items = [
+      { id: 1, name: 'Angular', category: 'Framework' },
+      { id: 2, name: 'React', category: 'Library' },
+    ];
+    const result = pipe.transform(items, '', '');
+    expect(result.length).toBe(2);
+    expect(result).toEqual(items);
+  });
+
+  it('returns an empty array when input is undefined', () => {
+    const items = undefined;
+    const result = pipe.transform(items || [], 'category', 'Framework');
+    expect(result).toEqual([]);
+  });
+
   it('should filter items based on filterKey and filterValue', () => {
     const items = [
       { name: 'Thulani', age: 25 },
