@@ -1,3 +1,21 @@
+<div class="bg-white rounded-lg border border-gray-200 shadow-md max-w-xl">
+  <div
+    class="space-y-2"
+    *ngFor="let skill of skills | filter : 'category' : 'Language'"
+  >
+    <div class="flex justify-between">
+      <span>{{ skill.name }}</span>
+      <span>{{ skill.proficiency }}/5</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div
+        class="bg-blue-600 h-2.5 rounded-full"
+        [style.width.%]="skill.proficiency * 20"
+      ></div>
+    </div>
+  </div>
+</div>
+
 <div
   class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2"
 >
