@@ -1,60 +1,94 @@
-<div class="bg-white rounded-lg border border-gray-200 shadow-md max-w-xl">
+<div class="px-8">
+  <div class="w-1/2 sm:w-full md:w-full lg:w-1/2 mx-auto my-3">
+    <app-page-header-card
+      cardHeading="Tools of the Trade"
+      cardContent="I am passionate about Engineering Software Solutions. I have a strong foundation in the following programming languages, frameworks, and testing tools. I am also familiar with the following tools and platforms."
+    ></app-page-header-card>
+  </div>
+  <h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
+    Programming Languages
+  </h1>
   <div
-    class="space-y-2"
-    *ngFor="let skill of skills | filter : 'category' : 'Language'"
+    class="bg-white rounded-lg border border-gray-200 shadow-md max-w-xl mx-auto my-3 p-4"
   >
-    <div class="flex justify-between">
-      <span>{{ skill.name }}</span>
-      <span>{{ skill.proficiency }}/5</span>
-    </div>
-    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-      <div
-        class="bg-blue-600 h-2.5 rounded-full"
-        [style.width.%]="skill.proficiency * 20"
-      ></div>
+    <div
+      class="space-y-2"
+      *ngFor="let skill of skills | filter : 'category' : 'Language'"
+    >
+      <div class="flex justify-between">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.proficiency }}/5</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div
+          class="bg-blue-600 h-2.5 rounded-full"
+          [style.width.%]="skill.proficiency * 20"
+        ></div>
+      </div>
     </div>
   </div>
-</div>
 
-<div
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2"
->
-  <ng-container
-    *ngFor="let skill of skills | filter : 'category' : 'Framework'"
+  <span class="flex items-center">
+    <span class="h-px flex-1 bg-black"></span>
+    <span class="shrink-0 px-6"
+      ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
+        Frameworks
+      </h1></span
+    >
+    <span class="h-px flex-1 bg-black"></span>
+  </span>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8">
+    <ng-container
+      *ngFor="let skill of skills | filter : 'category' : 'Framework'"
+    >
+      <app-card>
+        <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            {{ skill.name }}
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div
+              class="bg-blue-600 h-2.5 rounded-full"
+              [style.width.%]="skill.proficiency * 20"
+            ></div>
+          </div>
+        </div>
+      </app-card>
+    </ng-container>
+  </div>
+  <span class="flex items-center">
+    <span class="h-px flex-1 bg-black"></span>
+    <span class="shrink-0 px-6"
+      ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
+        Testing
+      </h1></span
+    >
+    <span class="h-px flex-1 bg-black"></span>
+  </span>
+
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-2"
   >
-    <div
-      class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
+    <ng-container
+      *ngFor="let skill of skills | filter : 'category' : 'Testing'"
     >
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-        {{ skill.name }}
-      </h5>
-      <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
-      <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+      <app-card>
         <div
-          class="bg-blue-600 h-2.5 rounded-full"
-          [style.width.%]="skill.proficiency * 20"
-        ></div>
-      </div>
-    </div>
-  </ng-container>
-</div>
-<div
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2"
->
-  <ng-container *ngFor="let skill of skills | filter : 'category' : 'Testing'">
-    <div
-      class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
-    >
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-        {{ skill.name }}
-      </h5>
-      <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
-      <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-        <div
-          class="bg-blue-600 h-2.5 rounded-full"
-          [style.width.%]="skill.proficiency * 20"
-        ></div>
-      </div>
-    </div>
-  </ng-container>
+          class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
+        >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            {{ skill.name }}
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div
+              class="bg-blue-600 h-2.5 rounded-full"
+              [style.width.%]="skill.proficiency * 20"
+            ></div>
+          </div>
+        </div>
+      </app-card>
+    </ng-container>
+  </div>
 </div>
