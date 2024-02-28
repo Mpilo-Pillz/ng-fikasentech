@@ -37,7 +37,9 @@
     >
     <span class="h-px flex-1 bg-black"></span>
   </span>
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8">
+  <div
+    class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 pb-4"
+  >
     <ng-container
       *ngFor="let skill of skills | filter : 'category' : 'Framework'"
     >
@@ -67,16 +69,12 @@
     <span class="h-px flex-1 bg-black"></span>
   </span>
 
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-2"
-  >
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8">
     <ng-container
       *ngFor="let skill of skills | filter : 'category' : 'Testing'"
     >
       <app-card>
-        <div
-          class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
-        >
+        <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
             {{ skill.name }}
           </h5>
