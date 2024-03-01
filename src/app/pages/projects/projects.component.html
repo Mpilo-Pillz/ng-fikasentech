@@ -1,6 +1,61 @@
 <div class="w-1/2 sm:w-full md:w-full lg:w-1/2 mx-auto my-3">
-    <app-page-header-card
+  <app-page-header-card
     cardHeading="Continous Improvement & Continuous Development"
     cardContent="My desire is to be a world class Software Engineer, as such I am constantly practicing to sharpen my craft. Outside of working hours I have collaborated with other senior developers to turn ideas into software helping me improve as a developer whiles exposing me to a variety of Tools and Frameworks. I have worked on the projects below. "
-    ></app-page-header-card>
+  ></app-page-header-card>
+</div>
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+  <img
+    class="w-full"
+    src="https://images.unsplash.com/photo-1707343848610-16f9afe1ae23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt="Project Image"
+  />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">My Angular Project</div>
+    <p class="text-gray-700 text-base">
+      A brief overview of your project goes here. Mention the key features or
+      the problem it solves. This project demonstrates my skills in developing
+      dynamic web applications using Angular and enhancing UI designs with
+      Tailwind CSS.
+    </p>
   </div>
+  <div class="px-6 pt-4 pb-2">
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >#Angular</span
+    >
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >#TailwindCSS</span
+    >
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+      >#WebDevelopment</span
+    >
+  </div>
+</div>
+
+@for (project of projects; track project) {
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+  <img
+    class="w-full"
+    src="https://images.unsplash.com/photo-1707343848610-16f9afe1ae23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt="Project Image"
+  />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{{ project.title }}</div>
+    <p class="text-gray-700 text-base">
+      {{ project.description }}
+    </p>
+  </div>
+
+  <div class="px-6 pt-4 pb-2">
+    @for (tool of project.stacks; track tool) {
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >{{ tool }}</span
+    >
+    }
+  </div>
+</div>
+}

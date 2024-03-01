@@ -1,0 +1,21 @@
+[
+  {
+    "id": 2,
+    "title": "Cinema Planner",
+    "description": "Mobile iOS application that allows users to plan their movie schedules and get reminders for their upcoming movies.",
+    "url": "https://github.com/Mpilo-Pillz/portfolio-project-cinema-planner",
+    "sourceCodeRepository": "https://github.com/Mpilo-Pillz/portfolio-project-cinema-planner",
+    "image": "https://res.cloudinary.com/mpilopillz/image/upload/v1627840116/timeenergy_vjorsn.png",
+    "stacks": [
+      "Swift",
+      "UIKit",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Bcrypt"
+    ]
+  }
+]
