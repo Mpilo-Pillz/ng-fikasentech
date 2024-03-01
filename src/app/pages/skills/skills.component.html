@@ -1,4 +1,4 @@
-<div class="p-8">
+<div class="">
   <div class="w-1/2 sm:w-full md:w-full lg:w-1/2 mx-auto my-3">
     <app-page-header-card
       cardHeading="Tools of the Trade"
@@ -28,65 +28,69 @@
     </div>
   </div>
 
-  <span class="flex items-center">
-    <span class="h-px flex-1 bg-black"></span>
-    <span class="shrink-0 px-6"
-      ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
-        Frameworks
-      </h1></span
+  <div class="p-8 bg-white">
+    <span class="flex items-center">
+      <span class="h-px flex-1 bg-black"></span>
+      <span class="shrink-0 px-6"
+        ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
+          Frameworks
+        </h1></span
+      >
+      <span class="h-px flex-1 bg-black"></span>
+    </span>
+    <div
+      class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 pb-4 bg-white"
     >
-    <span class="h-px flex-1 bg-black"></span>
-  </span>
-  <div
-    class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 pb-4"
-  >
-    <ng-container
-      *ngFor="let skill of skills | filter : 'category' : 'Framework'"
-    >
-      <app-card>
-        <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-            {{ skill.name }}
-          </h5>
-          <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
-          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-            <div
-              class="bg-blue-600 h-2.5 rounded-full"
-              [style.width.%]="skill.proficiency * 20"
-            ></div>
+      <ng-container
+        *ngFor="let skill of skills | filter : 'category' : 'Framework'"
+      >
+        <app-card>
+          <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              {{ skill.name }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
+            <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+              <div
+                class="bg-blue-600 h-2.5 rounded-full"
+                [style.width.%]="skill.proficiency * 20"
+              ></div>
+            </div>
           </div>
-        </div>
-      </app-card>
-    </ng-container>
+        </app-card>
+      </ng-container>
+    </div>
   </div>
-  <span class="flex items-center">
-    <span class="h-px flex-1 bg-black"></span>
-    <span class="shrink-0 px-6"
-      ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
-        Testing
-      </h1></span
-    >
-    <span class="h-px flex-1 bg-black"></span>
-  </span>
 
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8">
-    <ng-container
-      *ngFor="let skill of skills | filter : 'category' : 'Testing'"
-    >
-      <app-card>
-        <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-            {{ skill.name }}
-          </h5>
-          <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
-          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-            <div
-              class="bg-blue-600 h-2.5 rounded-full"
-              [style.width.%]="skill.proficiency * 20"
-            ></div>
+  <div class="p-8">
+    <span class="flex items-center">
+      <span class="h-px flex-1 bg-black"></span>
+      <span class="shrink-0 px-6"
+        ><h1 class="text-4xl font-bold text-center text-gray-800 mb-10 my-4">
+          Testing
+        </h1></span
+      >
+      <span class="h-px flex-1 bg-black"></span>
+    </span>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 lg:gap-8">
+      <ng-container
+        *ngFor="let skill of skills | filter : 'category' : 'Testing'"
+      >
+        <app-card>
+          <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              {{ skill.name }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700">{{ skill.category }}</p>
+            <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+              <div
+                class="bg-blue-600 h-2.5 rounded-full"
+                [style.width.%]="skill.proficiency * 20"
+              ></div>
+            </div>
           </div>
-        </div>
-      </app-card>
-    </ng-container>
+        </app-card>
+      </ng-container>
+    </div>
   </div>
 </div>
